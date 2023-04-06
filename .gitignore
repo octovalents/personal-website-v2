@@ -1,0 +1,29 @@
+# Ignore node_modules
+/node_modules
+
+# Ignore Django's migration files
+/mysite/__pycache__/
+/mysite/migrations/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore compiled TypeScript files
+*.js
+*.js.map
+
+# Ignore environment variables
+.env
+*.env
+
+# Ignore built files
+/build
+/static
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore VS Code files
+.vscode/
