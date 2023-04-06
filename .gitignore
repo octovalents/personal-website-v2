@@ -1,9 +1,10 @@
 # Ignore node_modules
-/node_modules
+frontend/node_modules
+frontend/node_modules/*
 
 # Ignore Django's migration files
-/mysite/__pycache__/
-/mysite/migrations/
+backend/api/__pycache__/
+backend/api/migrations/
 
 # Ignore compiled Python files
 *.pyc
