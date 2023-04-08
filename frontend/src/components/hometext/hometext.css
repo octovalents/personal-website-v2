@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --fsize-banner: 5em;
+}
+
+/*** Light Mode Theme ***/
+:root,
+[data-theme="default"] {
+    --logo-text-focus-color: #00ba34;
+    --logo-text-nonfocus-color: #42474c;
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+    --logo-text-focus-color: #0df6e3;
+    --logo-text-nonfocus-color: #f3f0f5;
+}
+
+/* ############################ LANDING PAGE ############################ */
+
+.my-own-banner {
+    position: relative;
+    margin: 45vh 0 55.55vh 0;
+    font-size: var(--fsize-banner);
+}
+
+.my-own-banner span {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.my-own-banner .my-own-banner-text1,
+.my-own-banner-text4 {
+    color: var(--logo-text-focus-color);
+    font-weight: bold;
+}
+
+.my-own-banner .my-own-banner-text2,
+.my-own-banner-text3 {
+    color: var(--logo-text-nonfocus-color);
+}
+
+.my-own-banner .my-own-banner-text1 {
+    animation: animated-text1 1s steps(30, end) 1 normal both;
+}
+
+.my-own-banner .my-own-banner-text2 {
+    animation: animated-text2 1s steps(30, end) 1s 1 normal both;
+}
+
+.my-own-banner .my-own-banner-text3 {
+    animation: animated-text3 200ms steps(30, end) 2.5s 1 normal both;
+}
+
+.my-own-banner .my-own-banner-text4 {
+    animation: animated-text4 1s steps(30, end) 3s 1 normal both;
+}
+
+/* text animation */
+
+@keyframes animated-text1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 5em;
+    }
+}
+
+@keyframes animated-text2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 3.5em;
+    }
+}
+
+@keyframes animated-text3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 3em;
+    }
+}
+
+@keyframes animated-text4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6em;
+    }
+}
+
+/* ############################ MEDIA QUERY ############################ */
+
+@media (max-width: 1440px) {
+    .my-own-banner {
+        font-size: 4.5em;
+    }
+}
+
+@media (max-width: 1100px) {
+    .my-own-banner {
+        font-size: 3em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .my-own-banner {
+        font-size: 2.5em;
+    }
+}
