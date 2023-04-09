@@ -1,10 +1,14 @@
-import React from 'react';
-import Header from 'components/header/header';
+import React from "react";
+import Header from "components/header/header";
+import HomeText from "components/hometext/hometext";
 
 const HomePage: React.FC = () => {
-  return (
-    <Header />
-  );
+    return (
+        <div>
+            <Header />
+            <HomeText />
+        </div>
+    );
 };
 
 export default HomePage;

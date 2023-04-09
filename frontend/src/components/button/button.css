@@ -1,0 +1,86 @@
+.oct-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10%;
+    background-color: #0DF6E3;
+    border: 0;
+    color: #0D4A56;
+    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.oct-btn:hover{
+    background-color: #228179;
+}
+
+.oct-btn:active {
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.oct-btn-text {
+    font-weight: 800;
+}
+
+.oct-btn.light{
+    background-color: #fff;
+    color: #42474C;
+    border: solid 1px #C3C3C3;
+    box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+.oct-btn.light:hover{
+    background-color: #E1E1E1;
+}
+
+.oct-btn.light:active {
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* styles for viewport width 320px - 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+    .oct-btn-text {
+        font-size: 14px;
+    }
+
+    .oct-btn-icon {
+        max-height: 20px;
+        max-width: 20px;
+    }
+}
+
+/* styles for viewport width 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .oct-btn-text {
+        font-size: 16px;
+    }
+
+    .oct-btn-icon {
+        max-height: 20px;
+        max-width: 20px;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .oct-btn-text {
+        font-size: 18px;
+    }
+
+    .oct-btn-icon {
+        max-height: 25px;
+        max-width: 25px;
+    }
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+    .oct-btn-text {
+        font-size: 20px;
+    }
+
+    .oct-btn-icon {
+        max-height: 30px;
+        max-width: 30px;
+    }
+}
