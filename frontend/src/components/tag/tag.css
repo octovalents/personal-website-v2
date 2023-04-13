@@ -1,0 +1,16 @@
+.oct-tag {
+    font-size:0.75em;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    border-radius: 10px;
+
+    color: #0DF6E3;
+    background-color: #0D4A56;
+}
+
+.oct-tag.light {
+    color: #42474C;
+    background-color: #DCDCDC;
+}
