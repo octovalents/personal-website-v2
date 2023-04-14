@@ -22,11 +22,11 @@ class Tag extends React.Component<Props, State> {
     render() {
         const { name, lightMode } = this.props;
 
-        const className = lightMode ? "oct-tag light" : "oct-tag";
-
         return (
             /* Define the structure of your component's UI here */
-            <span className={className}>{name}</span>
+            <span className={`oct-tag ${lightMode ? "light" : ""}`}>
+                {name}
+            </span>
         );
     }
 }
