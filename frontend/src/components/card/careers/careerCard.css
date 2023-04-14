@@ -1,0 +1,139 @@
+.oct-card-career{
+    height: fit-content;
+
+    background-color: #0A192F;
+    border: solid 3px #0D4A56;
+    border-radius: 10px;
+    box-shadow: 0;
+}
+
+.oct-card-career.light{
+    background-color: #fff;
+    border: solid 2px #C4C4C4;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.oct-card-career h1 {
+    font-size: 1.25em;
+    font-weight: 900;
+
+    color: #fff;
+}
+
+.position-job.light{
+    color: #212326;
+}
+
+.oct-card-career span {
+    font-size: 0.75em;
+}
+
+.oct-card-career .company-name {
+    font-weight: 800;
+
+    color: #fff;
+}
+
+.oct-card-career .light .company-name {
+    color: #42474C;
+}
+
+.oct-desc-norm {
+    color: #9490A4;
+}
+
+.oct-desc-norm .light {
+    color: #888171;
+}
+
+.oct-card-career .taglist {
+    margin-top: 10px;
+}
+
+/* styles for viewport width 320px - 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+    .oct-card-career {
+        max-width: 250px;
+        padding: 10px 30px 10px 10px;
+    }
+}
+
+/* styles for viewport width 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .oct-card-career {
+        max-width: 410px;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .oct-card-career h1 {
+        font-size: 1.75em;
+    }
+
+    .oct-card-career span {
+        font-size: 0.875em;
+    }
+
+    .oct-card-career .desc {
+        margin-top: 5px;
+    }
+
+    .oct-card-career .taglist {
+        margin-top: 15px;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .oct-card-career {
+        max-width: 550px;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .oct-card-career h1 {
+        font-size: 2em;
+    }
+
+    .oct-card-career span {
+        font-size: 1em;
+    }
+
+    .oct-card-career .desc {
+        margin-top: 10px;
+    }
+    
+    .oct-card-career .date {
+        margin-top: 5px;
+    }
+
+    .oct-card-career .taglist {
+        margin-top: 20px;
+    }
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+    .oct-card-career {
+        max-width: 750px;
+        padding: 20px 75px 20px 75px;
+    }
+
+    .oct-card-career h1 {
+        font-size: 2.25em;
+    }
+
+    .oct-card-career .desc {
+        margin-top: 15px;
+    }
+    
+    .oct-card-career .date {
+        margin-top: 8px;
+    }
+
+    .oct-card-career span {
+        font-size: 1em;
+    }
+
+    .oct-card-career .taglist {
+        margin-top: 25px;
+    }
+}
