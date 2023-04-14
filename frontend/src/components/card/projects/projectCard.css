@@ -1,0 +1,96 @@
+.oct-project-card {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+
+    background-color: #0A192F;
+    border: solid 3px #0D4A56;
+    border-radius: 10px;
+    box-shadow: 0;
+}
+
+.oct-project-card.light {
+    background-color: #fff;
+    border: solid 2px #C4C4C4 inset;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+}
+  
+.oct-project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.oct-project-card h3 {
+    font-weight: 700;
+    margin-top: 25px;
+    
+    color: #F3F0F5;
+}
+
+.oct-project-card h3.light  {
+    color: #42474C;
+}
+  
+.oct-project-card .project-name {
+    margin-top: 20px;
+    text-align: center;
+} 
+  
+.oct-project-card .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+  /* styles for viewport width 320px - 479px */
+@media (min-width: 320px) and (max-width: 479px) {
+    .oct-project-card {
+        max-width: 250px;
+    }
+
+    .oct-project-card h3 {
+        font-size: 1em;
+    }
+}
+
+/* styles for viewport width 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .oct-project-card {
+        max-width: 410px;
+    }
+
+    .oct-project-card h3 {
+        font-size: 1.25em;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .oct-project-card {
+        max-width: 410px;
+    }
+
+    .oct-project-card h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+    .oct-project-card {
+        max-width: 410px;
+    }
+
+    .oct-project-card h3 {
+        font-size: 1.5em;
+    }
+}
