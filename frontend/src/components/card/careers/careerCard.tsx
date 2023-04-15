@@ -1,6 +1,8 @@
 import React from "react";
-import "./careerCard.css";
 import Tag from "components/tag/tag";
+
+import "./careerCard.css";
+import "../card.css";
 
 interface Props {
     /* Define the props for your component here */
@@ -53,7 +55,10 @@ class CareerCard extends React.Component<Props, State> {
 
         return (
             /* Define the structure of your component's UI here */
-            <div className={`oct-card-career ${lightMode ? "light" : ""}`}>
+            <div
+                className={`oct-card oct-card-career ${
+                    lightMode ? "light" : ""
+                }`}>
                 <h1 className={`position-job ${lightMode ? "light" : ""}`}>
                     {positionJob}
                 </h1>
@@ -76,7 +81,7 @@ class CareerCard extends React.Component<Props, State> {
                     <span>{endDateStr}</span>
                     <span> · {monthsDiff} Mos</span>
                 </div>
-                <div className="taglist">
+                <div className="tag-list">
                     {tags.map((tag) =>
                         lightMode ? (
                             <Tag name={tag} lightMode />
