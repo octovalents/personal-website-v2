@@ -1,4 +1,4 @@
-.oct-project-card {
+.oct-card-project {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +6,7 @@
     padding-bottom: 30px;
 }
   
-.oct-project-card img {
+.oct-card-project img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -14,18 +14,18 @@
     border-top-right-radius: 5px;
 }
 
-.oct-project-card h2 {
+.oct-card-project h2 {
     font-weight: 700;
     margin-top: 25px;
     
     color: #F3F0F5;
 }
 
-.oct-project-card h2.light  {
+.oct-card-project h2.light  {
     color: #42474C;
 }
   
-.oct-project-card .project-name {
+.oct-card-project .project-name {
     margin-top: 20px;
     text-align: center;
 } 
@@ -33,45 +33,45 @@
 
   
   /* styles for viewport width 320px - 479px */
-@media (min-width: 320px) and (max-width: 479px) {
-    .oct-project-card {
+@media (max-width: 479px) {
+    .oct-card-project {
         max-width: 250px;
     }
 
-    .oct-project-card h2 {
+    .oct-card-project h2 {
         font-size: 1em;
     }
 }
 
 /* styles for viewport width 480px - 767px */
 @media (min-width: 480px) and (max-width: 767px) {
-    .oct-project-card {
+    .oct-card-project {
         max-width: 410px;
     }
 
-    .oct-project-card h2 {
+    .oct-card-project h2 {
         font-size: 1.25em;
     }
 }
 
 /* styles for viewport width 768px - 1279px */
 @media (min-width: 768px) and (max-width: 1279px) {
-    .oct-project-card {
+    .oct-card-project {
         max-width: 410px;
     }
 
-    .oct-project-card h2 {
+    .oct-card-project h2 {
         font-size: 1.5em;
     }
 }
 
 /* styles for viewport width >=1280 */
 @media (min-width: 1280px) {
-    .oct-project-card {
+    .oct-card-project {
         max-width: 410px;
     }
 
-    .oct-project-card h2 {
+    .oct-card-project h2 {
         font-size: 1.5em;
     }
 }

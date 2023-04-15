@@ -1,0 +1,19 @@
+/* styles for viewport width < 479px */
+@media (max-width: 479px) {
+
+}
+
+/* styles for viewport width 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+
+}

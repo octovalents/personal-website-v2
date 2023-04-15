@@ -84,9 +84,9 @@ class CareerCard extends React.Component<Props, State> {
                 <div className="tag-list">
                     {tags.map((tag) =>
                         lightMode ? (
-                            <Tag name={tag} lightMode />
+                            <Tag name={tag} key={tag} lightMode />
                         ) : (
-                            <Tag name={tag} />
+                            <Tag name={tag} key={tag} />
                         )
                     )}
                 </div>

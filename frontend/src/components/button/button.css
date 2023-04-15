@@ -38,7 +38,7 @@
 }
 
 /* styles for viewport width 320px - 479px */
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
     .oct-btn-text {
         font-size: 14px;
     }

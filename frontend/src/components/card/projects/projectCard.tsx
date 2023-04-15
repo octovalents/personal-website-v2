@@ -30,7 +30,7 @@ class ProjectCard extends React.Component<Props, State> {
         return (
             /* Define the structure of your component's UI here */
             <div
-                className={`oct-card oct-project-card ${
+                className={`oct-card oct-card-project ${
                     lightMode ? "light" : ""
                 }`}>
                 <img src={imgSrc} alt={name} />
@@ -38,9 +38,9 @@ class ProjectCard extends React.Component<Props, State> {
                 <div className="tag-list">
                     {tags.map((tag) =>
                         lightMode ? (
-                            <Tag name={tag} lightMode />
+                            <Tag name={tag} key={tag} lightMode />
                         ) : (
-                            <Tag name={tag} />
+                            <Tag name={tag} key={tag} />
                         )
                     )}
                 </div>

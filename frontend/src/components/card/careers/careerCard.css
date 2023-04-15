@@ -32,7 +32,7 @@
 }
 
 /* styles for viewport width 320px - 479px */
-@media (min-width: 320px) and (max-width: 479px) {
+@media (max-width: 479px) {
     .oct-card-career {
         max-width: 250px;
         padding: 10px 30px 10px 10px;
