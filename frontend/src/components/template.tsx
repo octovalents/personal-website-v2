@@ -2,6 +2,7 @@ import React from "react";
 
 interface Props {
     /* Define the props for your component here */
+    lightMode?: boolean;
 }
 
 interface State {
@@ -17,6 +18,8 @@ class MyComponent extends React.Component<Props, State> {
     }
 
     render() {
+        const { lightMode } = this.props;
+
         return (
             /* Define the structure of your component's UI here */
             <div></div>

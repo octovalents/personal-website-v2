@@ -14,14 +14,14 @@
     border-top-right-radius: 5px;
 }
 
-.oct-project-card h3 {
+.oct-project-card h2 {
     font-weight: 700;
     margin-top: 25px;
     
     color: #F3F0F5;
 }
 
-.oct-project-card h3.light  {
+.oct-project-card h2.light  {
     color: #42474C;
 }
   
@@ -38,7 +38,7 @@
         max-width: 250px;
     }
 
-    .oct-project-card h3 {
+    .oct-project-card h2 {
         font-size: 1em;
     }
 }
@@ -49,7 +49,7 @@
         max-width: 410px;
     }
 
-    .oct-project-card h3 {
+    .oct-project-card h2 {
         font-size: 1.25em;
     }
 }
@@ -60,7 +60,7 @@
         max-width: 410px;
     }
 
-    .oct-project-card h3 {
+    .oct-project-card h2 {
         font-size: 1.5em;
     }
 }
@@ -71,7 +71,7 @@
         max-width: 410px;
     }
 
-    .oct-project-card h3 {
+    .oct-project-card h2 {
         font-size: 1.5em;
     }
 }

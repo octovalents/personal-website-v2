@@ -34,7 +34,7 @@ class ProjectCard extends React.Component<Props, State> {
                     lightMode ? "light" : ""
                 }`}>
                 <img src={imgSrc} alt={name} />
-                <h3 className={`${lightMode ? "light" : ""}`}>{name}</h3>
+                <h2 className={`${lightMode ? "light" : ""}`}>{name}</h2>
                 <div className="tag-list">
                     {tags.map((tag) =>
                         lightMode ? (
