@@ -1,0 +1,78 @@
+.oct-card-skill .oct-skill-name{
+    font-weight: 800;
+    color: #F3F0F5;
+}
+
+.oct-skill-name.light {
+    color: #42474C;
+}
+
+.oct-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* styles for viewport width 320px - 479px */
+@media (max-width: 479px) {
+    .oct-card-skill{
+        max-width: 250px;
+        padding: 8px;
+    }
+
+    .oct-card-skill h2{
+        font-size: 1em;
+    }
+}
+
+/* styles for viewport width 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .oct-card-skill{
+        max-width: 310px;
+        padding: 15px 35px;
+    }
+
+    .oct-card-skill h2{
+        font-size: 1.25em;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .oct-card-skill{
+        max-width: 550px;
+        padding: 25px 75px 25px 40px;
+    }
+
+    .oct-container{
+        align-items: start;
+    }
+
+    .oct-card-skill h2{
+        font-size: 1.5em;
+    }
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+    .oct-card-skill{
+        max-width: 255px;
+        padding: 15px;
+    }
+
+    .oct-container{
+        align-items: center;
+    }
+
+    .oct-card-skill h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    .oct-card-skill .tag-list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
