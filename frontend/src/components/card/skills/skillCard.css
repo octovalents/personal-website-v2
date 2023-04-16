@@ -12,6 +12,43 @@
     flex-direction: column;
 }
 
+.circle-background{
+    fill: none;
+    stroke: #03060C;
+}
+
+.circle-progress{
+    fill: none;
+    stroke: #0DF6E3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-background.light{
+    stroke: #F8D568;
+}
+
+.circle-progress.light{
+    stroke: #00BA34;
+}
+
+.circle-text{
+    fill: #C8C5CE;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.circle-text .months-exp{
+    fill: #0DF6E3;
+}
+
+.circle-text.light{
+    fill: #42474C;
+}
+
+.circle-text.light .months-exp{
+    fill: #00BA34;
+}
 
 /* styles for viewport width 320px - 479px */
 @media (max-width: 479px) {
