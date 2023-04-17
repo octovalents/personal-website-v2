@@ -1,11 +1,13 @@
 .circle-background{
     fill: none;
     stroke: #03060C;
+    stroke-width: 10px;
 }
 
 .circle-progress{
     fill: none;
     stroke: #0DF6E3;
+    stroke-width: 10px;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -25,7 +27,7 @@
 
 .circle-text{
     fill: #C8C5CE;
-    font-size: 0.75em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -42,6 +44,25 @@
 }
 
 .circle-text-exp{
-    font-size: 0.875em;
+    font-size: 1.25em;
     color: #888171;
+}
+
+/* styles for viewport width < 767px */
+@media (max-width: 767px) {
+    .circle-text{
+        font-size: 0.75em;
+    }
+
+    .circle-text-exp{
+        font-size: 0.875em;
+    }
+
+    .circle-background{
+        stroke-width: 5px;
+    }
+
+    .circle-progress{
+        stroke-width: 5px;
+    }
 }

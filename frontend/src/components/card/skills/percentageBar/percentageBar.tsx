@@ -5,13 +5,13 @@ import "./percentageBar.css";
 interface Props {
     /* Define the props for your component here */
     monthsExp: number;
-    circleWidth: number;
     lightMode?: boolean;
 }
 
 interface State {
     /* Define the state for your component here */
     percentage: number;
+    circleWidth: number;
     monthsExpDisplay: number;
 }
 
@@ -23,7 +23,8 @@ class PercentageBar extends React.Component<Props, State> {
         this.state = {
             /* Initialize your component's state here */
             percentage: 0,
-            monthsExpDisplay: Math.floor(Math.random() * 100), // generate a random number between 0-99
+            monthsExpDisplay: 0, // generate a random number between 0-99
+            circleWidth: window.innerWidth < 768 ? 80 : 150,
         };
         this.interval = null;
     }
@@ -42,17 +43,25 @@ class PercentageBar extends React.Component<Props, State> {
                 this.setState({ monthsExpDisplay: this.props.monthsExp });
             }
         }, 7);
+        window.addEventListener("resize", this.handleResize);
     }
+
+    handleResize = () => {
+        const newWidth = window.innerWidth < 768 ? 80 : 150;
+        this.setState({ circleWidth: newWidth });
+    };
 
     componentWillUnmount() {
         if (this.interval) {
             clearInterval(this.interval);
         }
+
+        window.removeEventListener("resize", this.handleResize);
     }
 
     render() {
-        const { monthsExp, circleWidth, lightMode } = this.props;
-        const { percentage, monthsExpDisplay } = this.state;
+        const { monthsExp, lightMode } = this.props;
+        const { percentage, monthsExpDisplay, circleWidth } = this.state;
         const radius = circleWidth / 2 - 5;
         const dashArray = radius * Math.PI * 2;
         const dashOffset = dashArray - (dashArray * percentage) / 100;
