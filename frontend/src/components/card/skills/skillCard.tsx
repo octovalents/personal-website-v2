@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "components/tag/tag";
+import PercentageBar from "./percentageBar/percentageBar";
 
 import "./skillCard.css";
 import "../card.css";
@@ -26,88 +27,73 @@ class SkillCard extends React.Component<Props, State> {
 
     render() {
         const { name, monthsExp, tags, lightMode } = this.props;
-        const percentage = 25;
-        const radius = 85;
-        const dashArray = radius * Math.PI * 2;
-        const dashOffset = dashArray - (dashArray * percentage) / 100;
-        const circleWidth = 200;
 
         return (
-            <div>
-                <svg
-                    width={circleWidth}
-                    height={circleWidth}
-                    viewBox={`0 0 ${circleWidth} ${circleWidth}`}>
-                    <circle
-                        cx={circleWidth / 2}
-                        cy={circleWidth / 2}
-                        strokeWidth="10px"
-                        r={radius}
-                        className={`circle-background ${
-                            lightMode ? "light" : ""
-                        }`}
-                    />
-                    <circle
-                        cx={circleWidth / 2}
-                        cy={circleWidth / 2}
-                        strokeWidth="10px"
-                        r={radius}
-                        className={`circle-progress ${
-                            lightMode ? "light" : ""
-                        }`}
-                        style={{
-                            strokeDasharray: dashArray,
-                            strokeDashoffset: dashOffset,
-                        }}
-                        transform={`rotate(-90 ${circleWidth / 2} ${
-                            circleWidth / 2
-                        })`}
-                    />
-                    <text
-                        x="50%"
-                        y="50%"
-                        dy="0.3em"
-                        textAnchor="middle"
-                        className={`circle-text ${lightMode ? "light" : ""}`}>
-                        <tspan
-                            className="months-exp"
-                            x="27%"
-                            y="50%"
-                            dy="0.3em"
-                            textAnchor="middle">
-                            {monthsExp}
-                        </tspan>
-                        <tspan x="59%" y="50%" dy="0.3em" textAnchor="middle">
-                            Months
-                        </tspan>
-                    </text>
-                </svg>
-            </div>
             /* Define the structure of your component's UI here */
-            // <div
-            //     className={`oct-card oct-card-skill ${
-            //         lightMode ? "light" : ""
-            //     }`}>
-            //     {/* screen size > 768px */}
+            <div>
+                <div className="oct-screen-small">
+                    {/* for screensize < 768px */}
+                    <div
+                        className={`oct-card oct-card-skill ${
+                            lightMode ? "light" : ""
+                        }`}>
+                        <div className="oct-container">
+                            <PercentageBar
+                                monthsExp={monthsExp}
+                                lightMode={lightMode}
+                            />
+                            <h2
+                                className={`oct-skill-name ${
+                                    lightMode ? "light" : ""
+                                }`}>
+                                {name}
+                            </h2>
+                        </div>
+                        <div className="tag-list">
+                            {tags.map((tag) =>
+                                lightMode ? (
+                                    <Tag key={tag} name={tag} lightMode />
+                                ) : (
+                                    <Tag key={tag} name={tag} />
+                                )
+                            )}
+                        </div>
+                    </div>
+                </div>
+                <div className="oct-screen-large">
+                    {/* for screensize >= 768px */}
+                    <div
+                        className={`oct-card oct-card-skill ${
+                            lightMode ? "light" : ""
+                        }`}>
+                        {/* screen size > 768px */}
+                        <div className="oct-container-exp">
+                            <PercentageBar
+                                monthsExp={monthsExp}
+                                lightMode={lightMode}
+                            />
+                        </div>
 
-            //     <div className="oct-container">
-            //         <h2
-            //             className={`oct-skill-name ${
-            //                 lightMode ? "light" : ""
-            //             }`}>
-            //             {name}
-            //         </h2>
-            //         <div className="tag-list">
-            //             {tags.map((tag) =>
-            //                 lightMode ? (
-            //                     <Tag key={tag} name={tag} lightMode />
-            //                 ) : (
-            //                     <Tag key={tag} name={tag} />
-            //                 )
-            //             )}
-            //         </div>
-            //     </div>
-            // </div>
+                        <div className="oct-container">
+                            <h2
+                                className={`oct-skill-name ${
+                                    lightMode ? "light" : ""
+                                }`}>
+                                {name}
+                            </h2>
+                            <div className="tag-list">
+                                {tags.map((tag) =>
+                                    lightMode ? (
+                                        <Tag key={tag} name={tag} lightMode />
+                                    ) : (
+                                        <Tag key={tag} name={tag} />
+                                    )
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }

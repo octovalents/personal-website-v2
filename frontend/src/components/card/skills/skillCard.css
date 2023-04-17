@@ -12,44 +12,6 @@
     flex-direction: column;
 }
 
-.circle-background{
-    fill: none;
-    stroke: #03060C;
-}
-
-.circle-progress{
-    fill: none;
-    stroke: #0DF6E3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.circle-background.light{
-    stroke: #F8D568;
-}
-
-.circle-progress.light{
-    stroke: #00BA34;
-}
-
-.circle-text{
-    fill: #C8C5CE;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.circle-text .months-exp{
-    fill: #0DF6E3;
-}
-
-.circle-text.light{
-    fill: #42474C;
-}
-
-.circle-text.light .months-exp{
-    fill: #00BA34;
-}
-
 /* styles for viewport width 320px - 479px */
 @media (max-width: 479px) {
     .oct-card-skill{
@@ -58,7 +20,25 @@
     }
 
     .oct-card-skill h2{
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
         font-size: 1em;
+    }
+
+    .oct-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .oct-screen-small {
+        /* styles for screensize < 768px */
+        display: block;
+    }
+      .oct-screen-large {
+        /* styles for screensize >= 768px */
+        display: none;
     }
 }
 
@@ -66,17 +46,37 @@
 @media (min-width: 480px) and (max-width: 767px) {
     .oct-card-skill{
         max-width: 310px;
-        padding: 15px 35px;
+        padding: 15px 25px;
     }
 
     .oct-card-skill h2{
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
         font-size: 1.25em;
+    }
+
+    .oct-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .oct-screen-small {
+        /* styles for screensize < 768px */
+        display: block;
+    }
+    
+    .oct-screen-large {
+        /* styles for screensize >= 768px */
+        display: none;
     }
 }
 
 /* styles for viewport width 768px - 1279px */
 @media (min-width: 768px) and (max-width: 1279px) {
     .oct-card-skill{
+        display: flex;
         max-width: 550px;
         padding: 25px 75px 25px 40px;
     }
@@ -86,7 +86,25 @@
     }
 
     .oct-card-skill h2{
+        height: 75px;
         font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .oct-container-exp{
+        margin: 25px 20px 25px 0px;
+    }
+
+    .oct-screen-small {
+        /* styles for screensize < 768px */
+        display: none;
+    }
+
+    .oct-screen-large {
+        /* styles for screensize >= 768px */
+        display: block;
     }
 }
 
@@ -95,6 +113,9 @@
     .oct-card-skill{
         max-width: 255px;
         padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .oct-container{
@@ -111,5 +132,18 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+    }
+
+    .oct-container-exp{
+        margin: 15px 15px 30px 30px;
+    }
+
+    .oct-screen-small {
+        /* styles for screensize < 768px */
+        display: none;
+    }
+    .oct-screen-large {
+    /* styles for screensize >= 768px */
+        display: block;
     }
 }
