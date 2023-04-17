@@ -1,0 +1,47 @@
+.circle-background{
+    fill: none;
+    stroke: #03060C;
+}
+
+.circle-progress{
+    fill: none;
+    stroke: #0DF6E3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-percent-bar{
+    display: flex;
+    align-items: flex-end;
+}
+
+.circle-background.light{
+    stroke: #F8D568;
+}
+
+.circle-progress.light{
+    stroke: #00BA34;
+}
+
+.circle-text{
+    fill: #C8C5CE;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.circle-text .months-exp{
+    fill: #0DF6E3;
+}
+
+.circle-text.light{
+    fill: #42474C;
+}
+
+.circle-text.light .months-exp{
+    fill: #00BA34;
+}
+
+.circle-text-exp{
+    font-size: 0.875em;
+    color: #888171;
+}
