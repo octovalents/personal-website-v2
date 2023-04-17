@@ -1,5 +1,5 @@
 import React from "react";
-import Tag from "components/tag/tag";
+import TagList from "components/taglist/tagList";
 
 import "./projectCard.css";
 import "../card.css";
@@ -35,15 +35,7 @@ class ProjectCard extends React.Component<Props, State> {
                 }`}>
                 <img src={imgSrc} alt={name} />
                 <h2 className={`${lightMode ? "light" : ""}`}>{name}</h2>
-                <div className="tag-list">
-                    {tags.map((tag) =>
-                        lightMode ? (
-                            <Tag name={tag} key={tag} lightMode />
-                        ) : (
-                            <Tag name={tag} key={tag} />
-                        )
-                    )}
-                </div>
+                <TagList tags={tags} lightMode={lightMode} />
             </div>
         );
     }

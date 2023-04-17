@@ -19,3 +19,10 @@
     align-items: center;
     margin-top: 10px;
 }
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}  

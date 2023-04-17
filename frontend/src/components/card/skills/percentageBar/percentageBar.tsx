@@ -42,7 +42,7 @@ class PercentageBar extends React.Component<Props, State> {
                 // wait for 2-3 seconds before updating monthsExpDisplay to actual value
                 this.setState({ monthsExpDisplay: this.props.monthsExp });
             }
-        }, 7);
+        }, 8);
         window.addEventListener("resize", this.handleResize);
     }
 

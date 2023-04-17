@@ -1,5 +1,5 @@
 import React from "react";
-import Tag from "components/tag/tag";
+import TagList from "components/taglist/tagList";
 
 import "./careerCard.css";
 import "../card.css";
@@ -81,15 +81,7 @@ class CareerCard extends React.Component<Props, State> {
                     <span>{endDateStr}</span>
                     <span> · {monthsDiff} Mos</span>
                 </div>
-                <div className="tag-list">
-                    {tags.map((tag) =>
-                        lightMode ? (
-                            <Tag name={tag} key={tag} lightMode />
-                        ) : (
-                            <Tag name={tag} key={tag} />
-                        )
-                    )}
-                </div>
+                <TagList tags={tags} lightMode={lightMode} />
             </div>
         );
     }

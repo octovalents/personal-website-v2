@@ -1,5 +1,5 @@
 import React from "react";
-import Tag from "components/tag/tag";
+import TagList from "components/taglist/tagList";
 import PercentageBar from "./percentageBar/percentageBar";
 
 import "./skillCard.css";
@@ -49,15 +49,7 @@ class SkillCard extends React.Component<Props, State> {
                                 {name}
                             </h2>
                         </div>
-                        <div className="tag-list">
-                            {tags.map((tag) =>
-                                lightMode ? (
-                                    <Tag key={tag} name={tag} lightMode />
-                                ) : (
-                                    <Tag key={tag} name={tag} />
-                                )
-                            )}
-                        </div>
+                        <TagList tags={tags} lightMode={lightMode} />
                     </div>
                 </div>
                 <div className="oct-screen-large">
@@ -81,15 +73,7 @@ class SkillCard extends React.Component<Props, State> {
                                 }`}>
                                 {name}
                             </h2>
-                            <div className="tag-list">
-                                {tags.map((tag) =>
-                                    lightMode ? (
-                                        <Tag key={tag} name={tag} lightMode />
-                                    ) : (
-                                        <Tag key={tag} name={tag} />
-                                    )
-                                )}
-                            </div>
+                            <TagList tags={tags} lightMode={lightMode} />
                         </div>
                     </div>
                 </div>
