@@ -1,45 +1,58 @@
-import React, { useState } from "react";
+import React from "react";
+
 import "./button.css";
 
-interface ButtonProps {
+interface Props {
+    /* Define the props for your component here */
     lightMode?: boolean;
     imgSrc?: string;
     text?: string;
 }
 
-const MyButton: React.FC<ButtonProps> = ({
-    imgSrc,
-    text,
-    lightMode = false,
-}: ButtonProps) => {
-    let content = null;
-    let className = "oct-btn";
+interface State {
+    /* Define the state for your component here */
+}
 
-    if (imgSrc && text) {
-        content = (
-            <>
-                <img
-                    src={imgSrc}
-                    alt="Button icon"
-                    className="oct-btn-icon"
-                    style={{ marginRight: "15px" }}
-                />
-                <span className="oct-btn-text">{text}</span>
-            </>
-        );
-    } else if (imgSrc) {
-        content = (
-            <img src={imgSrc} alt="Button icon" className="oct-btn-icon" />
-        );
-    } else if (text) {
-        content = <span className="oct-btn-text">{text}</span>;
+class MyButton extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            /* Initialize your component's state here */
+        };
     }
 
-    if (lightMode) {
-        className = "oct-btn light";
-    }
+    render() {
+        const { imgSrc, text, lightMode } = this.props;
+        let content = null;
 
-    return <button className={className}>{content}</button>;
-};
+        if (imgSrc && text) {
+            content = (
+                <>
+                    <img
+                        src={imgSrc}
+                        alt="Button icon"
+                        className="oct-btn-icon"
+                        style={{ marginRight: "15px" }}
+                    />
+                    <span className="oct-btn-text">{text}</span>
+                </>
+            );
+        } else if (imgSrc) {
+            content = (
+                <img src={imgSrc} alt="Button icon" className="oct-btn-icon" />
+            );
+        } else if (text) {
+            content = <span className="oct-btn-text">{text}</span>;
+        }
+        console.log(lightMode);
+
+        return (
+            /* Define the structure of your component's UI here */
+            <button className={`oct-btn ${lightMode ? "light" : ""}`}>
+                {content}
+            </button>
+        );
+    }
+}
 
 export default MyButton;
