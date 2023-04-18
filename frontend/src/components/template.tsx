@@ -22,7 +22,7 @@ class MyComponent extends React.Component<Props, State> {
 
         return (
             /* Define the structure of your component's UI here */
-            <div></div>
+            <div className={`template ${lightMode ? "light" : ""}`}></div>
         );
     }
 }
