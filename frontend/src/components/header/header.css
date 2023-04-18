@@ -1,39 +1,88 @@
-.header_container {
-    background-color: #007bff;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .logo {
-    height: 40px;
-    width: auto;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+.oct-header{
+    display: flex;
     position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    z-index: 2;
-    pointer-events: all; /* add this line */
-  }
-  
-  
-  .menu_container {
-    background-color: #fff;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 220px;
-    z-index: 3;
-  }
-  
-  .dark-mode-button {
-    margin-top: auto;
-  }
-  
-  
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    flex-direction: row;
+    position: "sticky";
+    border-bottom: 1px solid #42474C;
+    transition: 0.6s;
+}
+
+.topnav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.menu-container-lg .oct-btn{
+    margin-inline: 20px;
+    min-width: 60px;
+}
+
+.menu-container-lg .oct-btn-text{
+    min-width: 120px;
+}
+
+.menu-container-lg .oct-btn-text{
+    font-size: 1em;
+}
+
+.menu-container-sm{
+    max-height: 50px;
+}
+.menu-container-sm img{
+    padding: 5px;
+}
+
+.menu-container-sm img:hover{
+    cursor: pointer;
+    border: solid 1px #CECECE;
+    border-radius: 10px;
+}
+
+.menu-container-sm img:active {
+    border: 0px;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* styles for viewport width >=1280 */
+@media (min-width: 1280px) {
+    .menu-container-lg {
+        /* styles for screensize < 768px */
+        display: flex;
+    }
+
+    .menu-container-sm {
+        /* styles for screensize >= 768px */
+        display: none;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (max-width: 1280px) {
+    .menu-container-lg {
+        /* styles for screensize < 768px */
+        display: none;
+    }
+    
+    .menu-container-sm {
+        /* styles for screensize >= 768px */
+        display: flex;
+    }
+}
+
+/* styles for viewport width 768px - 1279px */
+@media (max-width: 480px) {
+    .menu-container-sm{
+        max-height: 45px;
+    }
+    .menu-container-sm img{
+        max-width: 55px;
+        padding: 5px;
+    }
+}
