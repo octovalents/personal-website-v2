@@ -47,7 +47,9 @@ class MyHeader extends React.Component<Props, State> {
             <div
                 className={`oct-header ${lightMode ? "light" : ""}`}
                 style={{ padding: paddings }}>
-                <MyButton imgSrc="svgs/icon.svg" />
+                <div className="menu-home">
+                    <img src="svgs/icon.svg" alt="Home" />
+                </div>
                 <div className="topnav menu-container-sm">
                     <img src="svgs/menu.svg" alt="Menu" />
                 </div>

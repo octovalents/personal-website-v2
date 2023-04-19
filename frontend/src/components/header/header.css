@@ -19,13 +19,28 @@
     justify-content: end;
 }
 
+.menu-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 50px;
+}
+
+.menu-home img{
+    max-height: 50px;
+    padding: 5px;
+}
+
+.menu-home img:hover{
+    cursor: pointer;
+}
+
 .menu-container-lg .oct-btn{
     margin-inline: 20px;
     min-width: 60px;
     border: none;
     box-shadow: none;
 }
-
 
 .menu-container-lg .oct-btn-text{
     min-width: 120px;
