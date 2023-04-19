@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "components/header/header";
-import HomeText from "components/hometext/hometext";
+import MyHeader from "components/header/header";
 
 const HomePage: React.FC = () => {
     return (
-        <div>
-            <Header />
-            <HomeText />
+        <div style={{ background: "white" }}>
+            <MyHeader lightMode />
+            <div style={{ height: "1000px" }}>test</div>
         </div>
     );
 };
