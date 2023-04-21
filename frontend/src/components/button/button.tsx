@@ -44,7 +44,6 @@ class MyButton extends React.Component<Props, State> {
         } else if (text) {
             content = <span className="oct-btn-text">{text}</span>;
         }
-        console.log(lightMode);
 
         return (
             /* Define the structure of your component's UI here */
