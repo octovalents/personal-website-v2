@@ -1,7 +1,8 @@
 import React from "react";
 import MyButton from "components/button/button";
+import SideNavbar from "./sidenavbar/sidenavbar";
 
-import "./header.css";
+import "./navbar.css";
 
 interface Props {
     /* Define the props for your component here */
@@ -11,17 +12,20 @@ interface Props {
 interface State {
     /* Define the state for your component here */
     paddings: string;
+    isSideNavbarOpen: boolean;
 }
 
-class MyHeader extends React.Component<Props, State> {
+class MyNavbar extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         const scrollPosition = window.scrollY;
         this.state = {
             /* Initialize your component's state here */
             paddings: scrollPosition > 50 ? "20px 40px" : "40px",
+            isSideNavbarOpen: false,
         };
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleNavbarClick = this.handleNavbarClick.bind(this);
     }
 
     componentDidMount() {
@@ -38,9 +42,14 @@ class MyHeader extends React.Component<Props, State> {
         this.setState({ paddings });
     }
 
+    handleNavbarClick() {
+        const isSideNavbar = !this.state.isSideNavbarOpen;
+        this.setState({ isSideNavbarOpen: isSideNavbar });
+    }
+
     render() {
         const { lightMode } = this.props;
-        const { paddings } = this.state;
+        const { paddings, isSideNavbarOpen } = this.state;
 
         return (
             /* Define the structure of your component's UI here */
@@ -51,7 +60,14 @@ class MyHeader extends React.Component<Props, State> {
                     <img src="svgs/icon.svg" alt="Home" />
                 </div>
                 <div className="topnav menu-container-sm">
-                    <img src="svgs/menu.svg" alt="Menu" />
+                    <img
+                        className={`svg-menu-navbar ${
+                            lightMode ? "light" : ""
+                        } `}
+                        src="svgs/menu.svg"
+                        alt="Menu"
+                        onClick={this.handleNavbarClick}
+                    />
                 </div>
                 <div className="topnav menu-container-lg">
                     <MyButton imgSrc="svgs/sun.svg" lightMode={lightMode} />
@@ -61,9 +77,14 @@ class MyHeader extends React.Component<Props, State> {
                     <MyButton text="Skills" lightMode={lightMode} />
                     <MyButton text="Contact" lightMode={lightMode} />
                 </div>
+                <SideNavbar
+                    lightMode={lightMode}
+                    isOpen={isSideNavbarOpen}
+                    onClose={this.handleNavbarClick}
+                />
             </div>
         );
     }
 }
 
-export default MyHeader;
+export default MyNavbar;
