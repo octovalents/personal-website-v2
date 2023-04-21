@@ -8,6 +8,7 @@ interface Props {
     lightMode?: boolean;
     isOpen: boolean;
     onClose: () => void;
+    onLightMode: () => void;
 }
 
 interface State {
@@ -23,7 +24,7 @@ class SideNavbar extends React.Component<Props, State> {
     }
 
     render() {
-        const { lightMode, isOpen, onClose } = this.props;
+        const { lightMode, isOpen, onClose, onLightMode } = this.props;
 
         return (
             /* Define the structure of your component's UI here */
@@ -42,8 +43,11 @@ class SideNavbar extends React.Component<Props, State> {
                     <ul>
                         <li>
                             <MyButton
-                                imgSrc="svgs/sun.svg"
+                                imgSrc={`${
+                                    lightMode ? "svgs/sun.svg" : "svgs/moon.svg"
+                                }`}
                                 lightMode={lightMode}
+                                onClick={onLightMode}
                             />
                         </li>
                         <li>

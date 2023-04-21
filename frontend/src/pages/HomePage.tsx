@@ -1,13 +1,45 @@
 import React from "react";
-import MyHeader from "components/header/header";
+import MyNavbar from "components/navbar/navbar";
 
-const HomePage: React.FC = () => {
-    return (
-        <div style={{ background: "white" }}>
-            <MyHeader lightMode />
-            <div style={{ height: "1000px" }}>test</div>
-        </div>
-    );
-};
+interface Props {
+    /* Define the props for your component here */
+    lightMode?: boolean;
+}
 
-export default HomePage;
+interface State {
+    /* Define the state for your component here */
+    lightModeState: boolean;
+}
+
+class MyComponent extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            /* Initialize your component's state here */
+            lightModeState: false,
+        };
+        this.handleLightMode = this.handleLightMode.bind(this);
+    }
+
+    handleLightMode() {
+        const isLightMode = !this.state.lightModeState;
+        this.setState({ lightModeState: isLightMode });
+    }
+
+    render() {
+        const { lightMode } = this.props;
+        const { lightModeState } = this.state;
+
+        return (
+            /* Define the structure of your component's UI here */
+            <div className={`template ${lightMode ? "light" : ""}`}>
+                <MyNavbar
+                    lightMode={lightModeState}
+                    onLightMode={this.handleLightMode}
+                />
+            </div>
+        );
+    }
+}
+
+export default MyComponent;

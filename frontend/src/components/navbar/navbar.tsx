@@ -7,6 +7,7 @@ import "./navbar.css";
 interface Props {
     /* Define the props for your component here */
     lightMode?: boolean;
+    onLightMode: () => void;
 }
 
 interface State {
@@ -48,7 +49,7 @@ class MyNavbar extends React.Component<Props, State> {
     }
 
     render() {
-        const { lightMode } = this.props;
+        const { lightMode, onLightMode } = this.props;
         const { paddings, isSideNavbarOpen } = this.state;
 
         return (
@@ -70,7 +71,13 @@ class MyNavbar extends React.Component<Props, State> {
                     />
                 </div>
                 <div className="topnav menu-container-lg">
-                    <MyButton imgSrc="svgs/sun.svg" lightMode={lightMode} />
+                    <MyButton
+                        imgSrc={`${
+                            lightMode ? "svgs/sun.svg" : "svgs/moon.svg"
+                        }`}
+                        lightMode={lightMode}
+                        onClick={onLightMode}
+                    />
                     <MyButton text="Profile" lightMode={lightMode} />
                     <MyButton text="Experience" lightMode={lightMode} />
                     <MyButton text="Projects" lightMode={lightMode} />
@@ -81,6 +88,7 @@ class MyNavbar extends React.Component<Props, State> {
                     lightMode={lightMode}
                     isOpen={isSideNavbarOpen}
                     onClose={this.handleNavbarClick}
+                    onLightMode={onLightMode}
                 />
             </div>
         );

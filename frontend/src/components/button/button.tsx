@@ -7,6 +7,7 @@ interface Props {
     lightMode?: boolean;
     imgSrc?: string;
     text?: string;
+    onClick?: () => void;
 }
 
 interface State {
@@ -22,7 +23,7 @@ class MyButton extends React.Component<Props, State> {
     }
 
     render() {
-        const { imgSrc, text, lightMode } = this.props;
+        const { imgSrc, text, lightMode, onClick } = this.props;
         let content = null;
 
         if (imgSrc && text) {
@@ -47,7 +48,9 @@ class MyButton extends React.Component<Props, State> {
 
         return (
             /* Define the structure of your component's UI here */
-            <button className={`oct-btn ${lightMode ? "light" : ""}`}>
+            <button
+                className={`oct-btn ${lightMode ? "light" : ""}`}
+                onClick={onClick}>
                 {content}
             </button>
         );
