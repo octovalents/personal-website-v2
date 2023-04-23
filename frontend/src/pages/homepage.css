@@ -1,0 +1,9 @@
+.homepage{
+    background-color: #201A30;
+    transition: 1s;
+}
+
+.homepage.light{
+    background-color: #fff;
+    transition: 1s;
+}

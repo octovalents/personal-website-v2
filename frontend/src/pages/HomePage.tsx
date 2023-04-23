@@ -1,6 +1,8 @@
 import React from "react";
 import MyNavbar from "components/navbar/navbar";
 
+import "./homepage.css";
+
 interface Props {
     /* Define the props for your component here */
     lightMode?: boolean;
@@ -32,11 +34,12 @@ class MyComponent extends React.Component<Props, State> {
 
         return (
             /* Define the structure of your component's UI here */
-            <div className={`template ${lightMode ? "light" : ""}`}>
+            <div className={`homepage ${lightModeState ? "light" : ""}`}>
                 <MyNavbar
                     lightMode={lightModeState}
                     onLightMode={this.handleLightMode}
                 />
+                <p style={{ height: "10000px" }}>test</p>
             </div>
         );
     }
