@@ -19,7 +19,13 @@
 }
 
 .oct-btn-text {
+    font-size: 20px;
     font-weight: 800;
+}
+
+.oct-btn-icon {
+    max-height: 30px;
+    max-width: 30px;
 }
 
 .oct-btn.light{
@@ -37,32 +43,8 @@
     box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25) inset;
 }
 
-/* styles for viewport width 320px - 479px */
-@media (max-width: 479px) {
-    .oct-btn-text {
-        font-size: 14px;
-    }
-
-    .oct-btn-icon {
-        max-height: 20px;
-        max-width: 20px;
-    }
-}
-
-/* styles for viewport width 480px - 767px */
-@media (min-width: 480px) and (max-width: 767px) {
-    .oct-btn-text {
-        font-size: 16px;
-    }
-
-    .oct-btn-icon {
-        max-height: 20px;
-        max-width: 20px;
-    }
-}
-
-/* styles for viewport width 768px - 1279px */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* styles for viewport width 1280px */
+@media (max-width: 1280px) {
     .oct-btn-text {
         font-size: 18px;
     }
@@ -73,14 +55,26 @@
     }
 }
 
-/* styles for viewport width >=1280 */
-@media (min-width: 1280px) {
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
     .oct-btn-text {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .oct-btn-icon {
-        max-height: 30px;
-        max-width: 30px;
+        max-height: 20px;
+        max-width: 20px;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .oct-btn-text {
+        font-size: 14px;
+    }
+
+    .oct-btn-icon {
+        max-height: 20px;
+        max-width: 20px;
     }
 }

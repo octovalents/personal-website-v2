@@ -1,3 +1,17 @@
+.oct-card-skill{
+    display: flex;
+    max-width: 255px;
+    padding: 15px;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.oct-card-skill h2{
+    font-size: 1.5em;
+    text-align: center;
+}
+
 .oct-card-skill .oct-skill-name{
     font-weight: 800;
     color: #F3F0F5;
@@ -7,28 +21,82 @@
     color: #42474C;
 }
 
+.oct-card.oct-card-skill .tag-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .oct-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-/* styles for viewport width 320px - 479px */
-@media (max-width: 479px) {
+.oct-container-exp{
+    margin: 15px 15px 30px 30px;
+}
+
+.oct-screen-small {
+    /* styles for screensize < 768px */
+    display: none;
+}
+
+.oct-screen-large {
+    /* styles for screensize >= 768px */
+    display: block;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
     .oct-card-skill{
-        max-width: 250px;
-        padding: 8px;
+        display: flex;
+        max-width: 550px;
+        padding: 25px 75px 25px 40px;
+
+        flex-direction: initial;
+        align-items: initial;
     }
 
     .oct-card-skill h2{
+        height: 75px;
         display: flex;
-        margin-left: 10px;
         align-items: center;
         justify-content: center;
-        font-size: 1em;
+        font-size: 1.5em;
+        text-align: initial;
+    }
+
+    .oct-card.oct-card-skill .tag-list{
+        justify-content: initial;
+    }
+
+    .oct-container{
+        align-items: start;
+    }
+
+    .oct-container-exp{
+        margin: 25px 20px 25px 0px;
+    }
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .oct-card-skill{
+        display: block;
+        max-width: 310px;
+        padding: 15px 25px;
+    }
+
+    .oct-card-skill h2{
+        margin-left: 10px;
+        font-size: 1.25em;
     }
 
     .oct-container{
         display: flex;
+        align-items: initial;
         flex-direction: row;
     }
 
@@ -40,110 +108,18 @@
         /* styles for screensize >= 768px */
         display: none;
     }
+
 }
 
-/* styles for viewport width 480px - 767px */
-@media (min-width: 480px) and (max-width: 767px) {
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
     .oct-card-skill{
-        max-width: 310px;
-        padding: 15px 25px;
+        max-width: 250px;
+        padding: 10px;
     }
 
     .oct-card-skill h2{
-        display: flex;
-        margin-left: 10px;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
-    .oct-container{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .oct-screen-small {
-        /* styles for screensize < 768px */
-        display: block;
-    }
-    
-    .oct-screen-large {
-        /* styles for screensize >= 768px */
-        display: none;
-    }
-}
-
-/* styles for viewport width 768px - 1279px */
-@media (min-width: 768px) and (max-width: 1279px) {
-    .oct-card-skill{
-        display: flex;
-        max-width: 550px;
-        padding: 25px 75px 25px 40px;
-    }
-
-    .oct-container{
-        align-items: start;
-    }
-
-    .oct-card-skill h2{
-        height: 75px;
-        font-size: 1.5em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .oct-container-exp{
-        margin: 25px 20px 25px 0px;
-    }
-
-    .oct-screen-small {
-        /* styles for screensize < 768px */
-        display: none;
-    }
-
-    .oct-screen-large {
-        /* styles for screensize >= 768px */
-        display: block;
-    }
-}
-
-/* styles for viewport width >=1280 */
-@media (min-width: 1280px) {
-    .oct-card-skill{
-        max-width: 255px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .oct-container{
-        align-items: center;
-    }
-
-    .oct-card-skill h2{
-        font-size: 1.5em;
-        text-align: center;
-    }
-    
-    .oct-card-skill .tag-list{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .oct-container-exp{
-        margin: 15px 15px 30px 30px;
-    }
-
-    .oct-screen-small {
-        /* styles for screensize < 768px */
-        display: none;
-    }
-    .oct-screen-large {
-    /* styles for screensize >= 768px */
-        display: block;
-    }
 }

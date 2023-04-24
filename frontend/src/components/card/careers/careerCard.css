@@ -1,5 +1,10 @@
+.oct-card-career {
+    max-width: 750px;
+    padding: 20px 75px 20px 75px;
+}
+
 .oct-card-career h1 {
-    font-size: 1.25em;
+    font-size: 2.25em;
     font-weight: 900;
 
     color: #fff;
@@ -10,7 +15,19 @@
 }
 
 .oct-card-career span {
-    font-size: 0.75em;
+    font-size: 1em;
+}
+
+.oct-card-career .desc {
+    margin-top: 15px;
+}
+
+.oct-card-career .date {
+    margin-top: 8px;
+}
+
+.oct-card.oct-card-career .tag-list {
+    margin-top: 25px;
 }
 
 .oct-card-career .company-name {
@@ -31,40 +48,8 @@
     color: #888171;
 }
 
-/* styles for viewport width 320px - 479px */
-@media (max-width: 479px) {
-    .oct-card-career {
-        max-width: 250px;
-        padding: 10px 30px 10px 10px;
-    }
-}
-
-/* styles for viewport width 480px - 767px */
-@media (min-width: 480px) and (max-width: 767px) {
-    .oct-card-career {
-        max-width: 410px;
-        padding: 20px 30px 20px 30px;
-    }
-
-    .oct-card-career h1 {
-        font-size: 1.75em;
-    }
-
-    .oct-card-career span {
-        font-size: 0.875em;
-    }
-
-    .oct-card-career .desc {
-        margin-top: 5px;
-    }
-
-    .oct-card-career .taglist {
-        margin-top: 15px;
-    }
-}
-
-/* styles for viewport width 768px - 1279px */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
     .oct-card-career {
         max-width: 550px;
         padding: 20px 40px 20px 40px;
@@ -86,35 +71,63 @@
         margin-top: 5px;
     }
 
-    .oct-card-career .taglist {
+    .oct-card.oct-card-career .tag-list {
         margin-top: 20px;
     }
 }
 
-/* styles for viewport width >=1280 */
-@media (min-width: 1280px) {
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
     .oct-card-career {
-        max-width: 750px;
-        padding: 20px 75px 20px 75px;
+        max-width: 410px;
+        padding: 20px 30px 20px 30px;
     }
 
     .oct-card-career h1 {
-        font-size: 2.25em;
-    }
-
-    .oct-card-career .desc {
-        margin-top: 15px;
-    }
-    
-    .oct-card-career .date {
-        margin-top: 8px;
+        font-size: 1.75em;
     }
 
     .oct-card-career span {
-        font-size: 1em;
+        font-size: 0.875em;
     }
 
-    .oct-card-career .taglist {
-        margin-top: 25px;
+    .oct-card-career .desc {
+        margin-top: 5px;
+    }
+
+    .oct-card-career .date {
+        margin-top: 0px;
+    }
+
+    .oct-card.oct-card-career .tag-list {
+        margin-top: 15px;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .oct-card-career {
+        max-width: 250px;
+        padding: 10px 30px 10px 10px;
+    }
+
+    .oct-card-career h1 {
+        font-size: 1.25em;
+    }
+
+    .oct-card-career span {
+        font-size: 0.75em;
+    }
+
+    .oct-card-career .desc {
+        margin-top: 0px;
+    }
+    
+    .oct-card-career .date {
+        margin-top: 0px;
+    }
+
+    .oct-card.oct-card-career .tag-list {
+        margin-top: 0;
     }
 }

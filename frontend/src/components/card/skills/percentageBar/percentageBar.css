@@ -48,8 +48,8 @@
     color: #888171;
 }
 
-/* styles for viewport width < 767px */
-@media (max-width: 767px) {
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
     .circle-text{
         font-size: 0.75em;
     }
