@@ -1,0 +1,101 @@
+.about{
+    align-items: center;
+}
+
+.about .profile-pic{
+    max-width: 250px;
+    max-height: auto;
+    margin-bottom: 30px;
+}
+
+.about .hello{
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 15px;
+
+    color: #F3F0F5;
+}
+
+.about .hello.light{
+    color: #42474C;
+}
+
+.about .about-desc{
+    max-width: 600px;
+    font-size: 1.25em;
+    margin-bottom: 100px;
+    text-align: center;
+
+    color: #9490A4;
+}
+
+.about .about-desc.light{
+    color: #888171;
+}
+
+.btn-about{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-about .oct-btn{
+    margin: 0px 25px 0px 25px;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
+    .about .hello{
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .about .about-desc{
+        max-width: 400px;
+        font-size: 1em;
+        margin-bottom: 80px;
+    }
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .about .profile-pic{
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .about .hello{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .about .about-desc{
+        max-width: 300px;
+        font-size: 0.875em;
+        margin-bottom: 72px;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .about .profile-pic{
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+
+    .about .hello{
+        font-size: 1.125em;
+    }
+
+    .about .about-desc{
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .btn-about{
+        flex-direction: column;
+    }
+
+    .btn-about .oct-btn{
+        margin: 0px 0px 30px;
+    }
+}
