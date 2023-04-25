@@ -6,6 +6,9 @@ import "../section.css";
 
 interface Props {
     /* Define the props for your component here */
+    title: string;
+    imgSrc: string;
+    desc: string;
     lightMode?: boolean;
 }
 
@@ -22,7 +25,7 @@ class MyAbout extends React.Component<Props, State> {
     }
 
     render() {
-        const { lightMode } = this.props;
+        const { title, imgSrc, desc, lightMode } = this.props;
 
         return (
             /* Define the structure of your component's UI here */
@@ -32,25 +35,17 @@ class MyAbout extends React.Component<Props, State> {
                         className={`section-title-text ${
                             lightMode ? "light" : ""
                         }`}>
-                        My Profile
+                        {title}
                     </h1>
                     <h5
                         className={`section-subtitle-text ${
                             lightMode ? "light" : ""
                         }`}></h5>
                 </div>
-                <img
-                    className="profile-pic"
-                    src="\svgs\dummy-image.svg"
-                    alt="dummy-image"
-                />
+                <img className="profile-pic" src={imgSrc} alt={title} />
                 <h2 className={`hello ${lightMode ? "light" : ""}`}>Hello!</h2>
                 <p className={`about-desc ${lightMode ? "light" : ""}`}>
-                    My name is Benidictus Galih, a final year undergraduate
-                    student from Institut Teknologi Bandung. I have an
-                    experience learning as a machine learning path student at
-                    Bangkit Academy led by Google, Tokopedia, Gojek, &
-                    Traveloka. Browse my site to know more.
+                    {desc}
                 </p>
                 <div className="btn-about">
                     <MyButton
