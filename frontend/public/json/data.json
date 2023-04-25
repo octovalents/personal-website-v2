@@ -1,0 +1,141 @@
+{
+    "career": [
+        {
+            "position": "Software Engineer",
+            "companyname": "Acme Corporation",
+            "jobtype": "Full-time",
+            "from": "2019-01-01",
+            "to": "2022-05-01",
+            "tags": ["Java", "Spring Boot", "AWS", "Agile"]
+        },
+        {
+            "position": "Data Analyst",
+            "companyname": "Big Data Inc.",
+            "jobtype": "Contract",
+            "from": "2017-07-01",
+            "to": "2018-12-31",
+            "tags": ["SQL", "Data Visualization", "Excel"]
+        },
+        {
+            "position": "Web Developer",
+            "companyname": "Web Solutions Ltd.",
+            "jobtype": "Full-time",
+            "from": "2015-05-01",
+            "to": "2017-06-30",
+            "tags": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"]
+        }
+    ],
+    "project": [
+        {
+            "id": 1,
+            "name": "My Awesome Project",
+            "src": "/svgs/dummy-image.svg",
+            "tags": ["web development", "JavaScript", "React"],
+            "desc": "A web application that allows users to create and share custom playlists.",
+            "url": "https://github.com/myusername/myawesomeproject",
+            "notes": "This project is still a work in progress and may have some bugs."
+        },
+        {
+            "id": 2,
+            "name": "Weather App",
+            "src": "/svgs/dummy-image.svg",
+            "tags": ["web development", "API integration", "React"],
+            "desc": "A web application that shows the current weather and forecast for a given location.",
+            "url": "https://github.com/myusername/weatherapp",
+            "notes": "This project uses the OpenWeatherMap API for weather data."
+        },
+        {
+            "id": 3,
+            "name": "Chatbot",
+            "src": "/svgs/dummy-image.svg",
+            "tags": [
+                "artificial intelligence",
+                "natural language processing",
+                "Python"
+            ],
+            "desc": "A chatbot that can answer questions and carry on a conversation with users.",
+            "url": "https://github.com/myusername/chatbot",
+            "notes": "This project uses the Natural Language Toolkit (NLTK) library for text processing."
+        }
+    ],
+    "skills": [
+        {
+            "name": "JavaScript",
+            "months": 24,
+            "tags": ["Front-end Development", "Node.js", "React"]
+        },
+        {
+            "name": "Python",
+            "months": 36,
+            "tags": ["Data Science", "Machine Learning", "Flask"]
+        },
+        {
+            "name": "SQL",
+            "months": 48,
+            "tags": ["Relational Databases", "Data Analysis", "PostgreSQL"]
+        },
+        {
+            "name": "HTML",
+            "months": 60,
+            "tags": ["Web Development", "Accessibility", "SEO"]
+        },
+        {
+            "name": "CSS",
+            "months": 60,
+            "tags": ["Responsive Design", "Bootstrap", "Sass"]
+        },
+        {
+            "name": "Java",
+            "months": 36,
+            "tags": ["Enterprise Development", "Spring Framework", "Maven"]
+        }
+    ],
+    "language": {
+        "profesional": [
+            {
+                "lang": "eng",
+                "src": "/svgs/dummy-image.svg"
+            },
+            {
+                "lang": "spa",
+                "src": "/svgs/dummy-image.svg"
+            },
+            {
+                "lang": "fra",
+                "src": "/svgs/dummy-image.svg"
+            }
+        ],
+        "elementary": [
+            {
+                "lang": "ger",
+                "src": "/svgs/dummy-image.svg"
+            },
+            {
+                "lang": "jpn",
+                "src": "/svgs/dummy-image.svg"
+            }
+        ]
+    },
+    "socialmedia": [
+        {
+            "name": "Twitter",
+            "src": "/svgs/dummy-image.svg",
+            "url": "https://twitter.com/"
+        },
+        {
+            "name": "LinkedIn",
+            "src": "/svgs/dummy-image.svg",
+            "url": "https://www.linkedin.com/"
+        },
+        {
+            "name": "GitHub",
+            "src": "/svgs/dummy-image.svg",
+            "url": "https://github.com/"
+        },
+        {
+            "name": "Instagram",
+            "src": "/svgs/dummy-image.svg",
+            "url": "https://www.instagram.com/"
+        }
+    ]
+}
