@@ -1,0 +1,138 @@
+.oct-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text{
+    font-size: 1.25em;
+    margin-bottom: 100px;
+
+    color: #F3F0F5;
+}
+
+.footer-text.light{
+    color: #42474C;
+}
+
+.footer-line{
+    border: none;
+    width: 880px;
+    height: 3px;
+    margin-bottom: 75px;
+    background-color: #0DF6E3;
+}
+
+.footer-line.light{
+    background-color: #212326;
+}
+
+.footer-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+.footer-list a{
+    font-size: 1.25em;
+    color: #0DF6E3;
+}
+
+.footer-list a:hover{
+    color: #228179;
+}
+
+.footer-list a:active{
+    color: #165651;
+}
+
+.footer-list.light a{
+    color: #42474C;   
+}
+
+.footer-list.light a:hover{
+    color: #767e87;   
+}
+
+.footer-list.light a:active{
+    color: #5f656c;   
+}
+
+.footer-list{
+    padding: 0px;
+    margin-inline: 10px;
+}
+
+.footer-list li{
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.footer-list li a{
+    text-decoration: none;
+    font-weight: 800;
+    padding: 10px;
+}
+
+.footer-list-lg{
+    display: block;
+}
+
+.footer-list-sm{
+    display: none;
+    flex-direction: row;
+}
+
+.footer-list-sm .footer-list{
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
+    .footer-line{
+        width: 410px;
+        margin-bottom: 50px;
+    }
+
+    .footer-list-lg{
+        display: none;
+    }
+    
+    .footer-list-sm{
+        display: flex;
+    }
+
+    .footer-text{
+        font-size: 1.125em;
+    }
+
+    .footer-list a{
+        font-size: 1.125em;
+    }
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .footer-line{
+        margin-bottom: 30px;
+    }
+
+    .footer-text{
+        font-size: 0.875em;
+    }
+
+    .footer-list a{
+        font-size: 0.875em;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .footer-line{
+        width: 250px;
+    }
+}

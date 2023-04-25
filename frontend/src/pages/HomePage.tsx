@@ -1,5 +1,8 @@
 import React from "react";
 import MyNavbar from "components/navbar/navbar";
+import MyAbout from "components/section/about/about";
+import MyCareer from "components/section/career/career";
+import MyFooter from "components/section/footer/footer";
 
 import "./homepage.css";
 
@@ -31,6 +34,8 @@ class MyComponent extends React.Component<Props, State> {
     render() {
         const { lightMode } = this.props;
         const { lightModeState } = this.state;
+        const from_date = new Date("2022-10");
+        const end_date = new Date("2022-12");
 
         return (
             /* Define the structure of your component's UI here */
@@ -39,7 +44,16 @@ class MyComponent extends React.Component<Props, State> {
                     lightMode={lightModeState}
                     onLightMode={this.handleLightMode}
                 />
-                <p style={{ height: "10000px" }}>test</p>
+                <div className="container">
+                    <p style={{ height: "620px" }}>test</p>
+                    <MyAbout
+                        imgSrc="\svgs\dummy-image.svg"
+                        desc="My name is Benidictus Galih, a final year undergraduate student from Institut Teknologi Bandung. I have an experience learning as a machine learning path student at Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka. Browse my site to know more."
+                        lightMode={lightModeState}
+                    />
+                    <MyCareer lightMode={lightModeState} />
+                    <MyFooter lightMode={lightModeState} />
+                </div>
             </div>
         );
     }

@@ -33,7 +33,7 @@
     color: #888171;
 }
 
-.section-title .section-line{
+.section-line{
     border: none;
     width: 880px;
     height: 3px;
@@ -41,7 +41,7 @@
     background-color: #0DF6E3;
 }
 
-.section-title .section-line.light{
+.section-line.light{
     background-color: #212326;
 }
 
@@ -52,7 +52,7 @@
         font-size: 1em;
     }
 
-    .section-title .section-line{
+    .section-line{
         width: 410px;
     }
 }
@@ -72,7 +72,7 @@
         margin-top: 0px;
     }
 
-    .section-title .section-line{
+    .section-line{
         margin-bottom: 80px;
     }
 }
@@ -87,7 +87,7 @@
         font-size: 1.5em;
     }
 
-    .section-title .section-line{
+    .section-line{
         width: 250px;
     }
 }
