@@ -1,6 +1,8 @@
 .section{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 125px 0px 150px;
 }
 
@@ -31,11 +33,27 @@
     color: #888171;
 }
 
+.section-title .section-line{
+    border: none;
+    width: 880px;
+    height: 3px;
+    margin-bottom: 125px;
+    background-color: #0DF6E3;
+}
+
+.section-title .section-line.light{
+    background-color: #212326;
+}
+
 
 /* styles for viewport width 1280 */
 @media (max-width: 1280px) {
     .section-title .section-subtitle-text{
         font-size: 1em;
+    }
+
+    .section-title .section-line{
+        width: 410px;
     }
 }
 
@@ -53,6 +71,10 @@
         font-size: 0.875em;
         margin-top: 0px;
     }
+
+    .section-title .section-line{
+        margin-bottom: 80px;
+    }
 }
 
 /* styles for viewport width 480px */
@@ -63,5 +85,9 @@
 
     .section .section-title .section-title-text{
         font-size: 1.5em;
+    }
+
+    .section-title .section-line{
+        width: 250px;
     }
 }
