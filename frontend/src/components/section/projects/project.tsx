@@ -47,6 +47,7 @@ class MyProject extends React.Component<Props, State> {
                         imgSrc={project.src}
                         name={project.name}
                         tags={project.tags}
+                        lightMode={lightMode}
                     />
                 ))}
             </div>
