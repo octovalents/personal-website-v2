@@ -5,7 +5,7 @@
     margin: 20px;
     padding-bottom: 30px;
 
-    max-width: 410px;
+    width: 410px;
 }
   
 .oct-card-project img {
@@ -19,6 +19,7 @@
 .oct-card-project h2 {
     font-weight: 700;
     margin-top: 25px;
+    text-align: center;
     
     color: #F3F0F5;
 
@@ -28,18 +29,15 @@
 .oct-card-project h2.light  {
     color: #42474C;
 }
-  
-.oct-card-project .project-name {
-    margin-top: 20px;
-    text-align: center;
-} 
+
+.oct-card-project .tag-list{
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 0px 10px;
+}
   
 /* styles for viewport width 1280 */
 @media (max-width: 1280px) {
-    .oct-card-project {
-        max-width: 410px;
-    }
-
     .oct-card-project h2 {
         font-size: 1.5em;
     }
@@ -48,7 +46,7 @@
 /* styles for viewport width 768px */
 @media (max-width: 768px) {
     .oct-card-project {
-        max-width: 410px;
+        width: 350px;
     }
 
     .oct-card-project h2 {

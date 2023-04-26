@@ -44,6 +44,7 @@ class MyProject extends React.Component<Props, State> {
                 />
                 {projects.map((project) => (
                     <ProjectCard
+                        key={project.id}
                         imgSrc={project.src}
                         name={project.name}
                         tags={project.tags}

@@ -1,7 +1,7 @@
 .oct-tag {
     width: fit-content;
     
-    font-size:0.75em;
+    font-size:1em;
     display: inline-block;
     margin: 10px 10px 10px 0px;
     padding: 10px 20px;
@@ -16,4 +16,23 @@
 .oct-tag.light {
     color: #42474C;
     background-color: #DCDCDC;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
+    
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .oct-tag {
+        font-size:0.875em;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .oct-tag {
+        font-size:0.75em;
+    }
 }
