@@ -4,6 +4,7 @@ import "./section.css";
 
 interface Props {
     /* Define the props for your component here */
+    sectionid?: string;
     title: string;
     subtitle?: string;
     lightMode?: boolean;
@@ -22,12 +23,15 @@ class SectionTitle extends React.Component<Props, State> {
     }
 
     render() {
-        const { title, subtitle, lightMode } = this.props;
+        const { sectionid, title, subtitle, lightMode } = this.props;
 
         return (
             /* Define the structure of your component's UI here */
             <div className="section-title">
-                <hr className={`section-line ${lightMode ? "light" : ""}`} />
+                <hr
+                    id={sectionid}
+                    className={`section-line ${lightMode ? "light" : ""}`}
+                />
                 <h1
                     className={`section-title-text ${
                         lightMode ? "light" : ""

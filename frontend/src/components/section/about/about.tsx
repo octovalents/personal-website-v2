@@ -30,7 +30,11 @@ class MyAbout extends React.Component<Props, State> {
         return (
             /* Define the structure of your component's UI here */
             <div className={`section about ${lightMode ? "light" : ""}`}>
-                <SectionTitle title="My Profile" lightMode={lightMode} />
+                <SectionTitle
+                    sectionid="profile"
+                    title="My Profile"
+                    lightMode={lightMode}
+                />
                 <img className="profile-pic" src={imgSrc} alt="My Profile" />
                 <h2 className={`hello ${lightMode ? "light" : ""}`}>Hello!</h2>
                 <p className={`about-desc ${lightMode ? "light" : ""}`}>

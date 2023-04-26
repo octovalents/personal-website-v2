@@ -1,9 +1,10 @@
 import React from "react";
 import SectionTitle from "../sectionTitle";
 import ProjectCard from "components/card/projects/projectCard";
+import MyButton from "components/button/button";
 
 import "../section.css";
-// import "./project.css";
+import "./project.css";
 
 interface Props {
     /* Define the props for your component here */
@@ -38,6 +39,7 @@ class MyProject extends React.Component<Props, State> {
             /* Define the structure of your component's UI here */
             <div className={`section project ${lightMode ? "light" : ""}`}>
                 <SectionTitle
+                    sectionid="projects"
                     title="My Projects"
                     subtitle="Top projects that led me developed my skills"
                     lightMode={lightMode}
@@ -51,6 +53,7 @@ class MyProject extends React.Component<Props, State> {
                         lightMode={lightMode}
                     />
                 ))}
+                <MyButton text="More Projects" lightMode={lightMode} />
             </div>
         );
     }

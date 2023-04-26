@@ -35,7 +35,7 @@ class MyFooter extends React.Component<Props, State> {
                             <a href="#profile">Profile</a>
                         </li>
                         <li>
-                            <a href="#experience">Experience</a>
+                            <a href="#career">Experience</a>
                         </li>
                     </ul>
                     <ul className={`footer-list ${lightMode ? "light" : ""}`}>
@@ -59,7 +59,7 @@ class MyFooter extends React.Component<Props, State> {
                             <a href="#profile">Profile</a>
                         </li>
                         <li>
-                            <a href="#experience">Experience</a>
+                            <a href="#career">Experience</a>
                         </li>
                         <li>
                             <a href="#projects">Projects</a>
