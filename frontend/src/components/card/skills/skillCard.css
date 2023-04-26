@@ -2,9 +2,14 @@
     display: flex;
     max-width: 255px;
     padding: 15px;
+    margin: 40px;
     
     flex-direction: column;
     align-items: center;
+}
+
+.oct-card.oct-card-skill{
+    min-height: 450px;
 }
 
 .oct-card-skill h2{
@@ -45,15 +50,20 @@
 
 .oct-screen-large {
     /* styles for screensize >= 768px */
-    display: block;
+    display: flex;
 }
 
 /* styles for viewport width 1280 */
 @media (max-width: 1280px) {
+    .oct-card.oct-card-skill{
+        min-height: initial;
+    }
+
     .oct-card-skill{
         display: flex;
         max-width: 550px;
         padding: 25px 75px 25px 40px;
+        margin: 30px;
 
         flex-direction: initial;
         align-items: initial;
@@ -116,6 +126,7 @@
     .oct-card-skill{
         max-width: 250px;
         padding: 10px;
+        margin: 20px;
     }
 
     .oct-card-skill h2{
