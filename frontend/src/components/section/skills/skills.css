@@ -1,0 +1,72 @@
+.skill-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lang-line{
+    border: none;
+    height: 2px;
+
+    width: 550px;
+    margin: 125px 0px 90px;
+
+    background-color: #F3F0F5;
+}
+
+.lang-line.light{
+    background-color: #212326;
+}
+
+.lang-title{
+    font-size: 2.25em;
+    margin-bottom: 40px;
+
+    color: #F3F0F5;
+}
+
+.lang-title.light{
+    color: #42474C;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
+    .skill-container{
+        flex-direction: column;
+    }
+
+    .lang-line{
+        width: 350px;
+        margin: 125px 0px 70px;
+    }
+
+    .lang-title{
+        font-size: 2em;
+    }    
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .lang-line{
+        width: 250px;
+        margin: 125px 0px 40px;
+    }
+
+    .lang-title{
+        font-size: 1.25em;
+        margin-bottom: 20px;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+    .lang-line{
+        width: 200px;
+    }
+
+    .lang-title{
+        font-size: 1em;
+        margin-bottom: 20px;
+    }    
+}

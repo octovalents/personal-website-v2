@@ -1,0 +1,51 @@
+.lang-section{
+    margin: 10px 0px;
+}
+
+.lang-level{
+    font-size: 1.5em;
+    color: #9490A4;
+}
+
+.lang-level.light{
+    color: #888171;
+}
+
+.lang-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.lang-card img{
+    width: 60px;
+    height: 60px;
+
+    margin: 10px 10px 10px 0px;
+    border-radius: 10px;
+}
+
+/* styles for viewport width 1280 */
+@media (max-width: 1280px) {
+    .lang-level{
+        font-size: 1.25em;
+    }
+}
+
+/* styles for viewport width 768px */
+@media (max-width: 768px) {
+    .lang-level{
+        font-size: 0.875em;
+    }
+
+    .lang-card img{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* styles for viewport width 480px */
+@media (max-width: 480px) {
+
+}
