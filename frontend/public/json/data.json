@@ -60,31 +60,37 @@
     ],
     "skills": [
         {
+            "id": 1,
             "name": "JavaScript",
             "months": 24,
             "tags": ["Front-end Development", "Node.js", "React"]
         },
         {
+            "id": 2,
             "name": "Python",
             "months": 36,
             "tags": ["Data Science", "Machine Learning", "Flask"]
         },
         {
+            "id": 3,
             "name": "SQL",
             "months": 48,
             "tags": ["Relational Databases", "Data Analysis", "PostgreSQL"]
         },
         {
+            "id": 4,
             "name": "HTML",
             "months": 60,
             "tags": ["Web Development", "Accessibility", "SEO"]
         },
         {
+            "id": 5,
             "name": "CSS",
             "months": 60,
             "tags": ["Responsive Design", "Bootstrap", "Sass"]
         },
         {
+            "id": 6,
             "name": "Java",
             "months": 36,
             "tags": ["Enterprise Development", "Spring Framework", "Maven"]
